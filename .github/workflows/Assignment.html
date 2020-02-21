@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    
+    <title></title>
+
+    
+</head>
+<body>
+
+    <form name="Formx">
+        <label>First Name:</label><br />
+        <input type="text" name="FirstName" id="FirstName"/><br />
+        <br />
+
+        <label>Last Name:</label><br />
+        <input type="text" name="LastName" /> <br />
+        <br />
+
+        <label>Email:</label><br />
+        <input type="email" name="Email" /> <br />
+        <br />
+
+        <label>Contact Number:</label><br />
+        <input type="number" name="CNumber" /> <br />
+        <br />
+
+        <label>User Name:</label><br />
+        <input type="text" name="Username" /> <br />
+        <br />
+
+        <label>Password:</label><br />
+        <input type="password" name="Password" /> <br />
+        <br />
+
+        <label>Gender:</label> <br />
+        <input type="radio" id="male" name="gender" value="male">
+        <label>Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label>Female</label><br>
+
+        <br />
+        Qualification <br />
+        <select id="Qua">
+            <option value="default">default</option>
+        </select>
+
+        <script>
+
+            var select = document.getElementById("Qua"),
+                arr = ["btech", "mtech", "mca"];
+
+            for (var i = 0; i < arr.length; i++) {
+                var option = document.createElement("OPTION"),
+                    txt = document.createTextNode(arr[i]);
+                option.appendChild(txt);
+                option.setAttribute("value", arr[i]);
+                select.insertBefore(option, select.lastChild);
+            }
+
+        </script>
+        <br />
+
+
+        <br />
+
+        <label>Experience:</label> <br />
+
+        <select id="Exp">
+            <option value="default">default</option>
+        </select>
+
+        <script>
+
+            var select = document.getElementById("Exp"),
+                arr = ["1", "2", "3",">3"];
+
+            for (var i = 0; i < arr.length; i++) {
+                var option = document.createElement("OPTION"),
+                    txt = document.createTextNode(arr[i]);
+                option.appendChild(txt);
+                option.setAttribute("value", arr[i]);
+                select.insertBefore(option, select.lastChild);
+            }
+            
+        </script>
+
+        <br /><br />
+
+        <label> Coding Languages:</label> <br />
+        <input type="checkbox" name="c/c++" value="c/c++" />
+        <label>C/C++</label><br />
+        <input type="checkbox" name="java" value="java" />
+        <label>Java</label><br />
+        <input type="checkbox" name="c#" value="c#" />
+        <label>C#</label><br />
+        <input type="checkbox" name="php" value="php" />
+        <label>Php</label><br />
+        <input type="checkbox" name="python" value="python" />
+        <label>Python</label><br />
+
+
+        <br /><input type="submit" value="Submit">
+    </form>
+    <script>
+        fname = document.getElementById("FirstName");
+        alert(fname);
+    </script>
+
+</body>
+</html>
